@@ -43,7 +43,7 @@ class Main extends PluginBase{
 	}
 
 	public function swsolo(Player $player){
-		$menu = InvMenu::create(InvMenu::TYPE_CHEST);
+		$menu = InvMenu::create(InvMenu::TYPE_DOUBLE_CHEST);
 		$menu->readOnly();
 		$menu->setListener(\Closure::fromCallable([$this, "GUIListener"]));
 		$menu->setName("Skywars Games");
