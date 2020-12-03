@@ -49,11 +49,11 @@ class Main extends PluginBase{
 		$menu->setName("Skywars Games");
 		$menu->send($player);
 		$inv = $menu->getInventory();
-        $grass = Item::get(Item::GRASS)->setCustomName(" Sw Solo");
-        $feather = Item::get(Item::FEATHER)->setCustomName(" Sw Duos");
-		$stone = Item::get(Item::STONE)->setCustomName("Sw Random");
-        $dirt = Item::get(Item::DIRT)->setCustomName(" Sw Trios");
-		$diamond_sword = Item::get(Item::DIAMOND_SWORD)->setCustomName("Sw 1v1 & 2v2");
+        $grass = Item::get(Item::GRASS)->setCustomName(" SkyWars Solo");
+        $feather = Item::get(Item::FEATHER)->setCustomName(" SkyWars Duos");
+		$stone = Item::get(Item::STONE)->setCustomName("SkyWars Random");
+        $dirt = Item::get(Item::DIRT)->setCustomName(" SkyWars Trios");
+		$diamond_sword = Item::get(Item::DIAMOND_SWORD)->setCustomName("SkyWars 1v1 & 2v2");
 		$inv->setItem(9, $grass);
 		$inv->setItem(11, $feather);
         $inv->setItem(13, $stone);
