@@ -1,8 +1,8 @@
-name: SkywarsGui
-main: TheBlast\SWGUI\Main
+name: SkywarsGuiSolo
+main: TheBlast\SWGUISOLO\Main
 author: TheBlast
 version: 1.0.0
 api: 3.0.0
 command:
- swgui:
-  description: opens sw join gui
+ swsolo:
+  description: opens sw join gui for solo
