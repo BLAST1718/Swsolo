@@ -1,6 +1,6 @@
 <?php
 
-namespace TheBlast\SWGUI;
+namespace TheBlast\SWGUISOLO;
 
 use muqsit\invmenu\InvMenu;
 use muqsit\invmenu\InvMenuHandler;
@@ -20,7 +20,7 @@ class Main extends PluginBase{
 		if(!InvMenuHandler::isRegistered()){
 			InvMenuHandler::register($this);
 		}
-		$command = new PluginCommand("swgui", $this);
+		$command = new PluginCommand("swsolo", $this);
 		$command->setDescription("SwGui command");
 		$this->getServer()->getCommandMap()->register("sw", $command);
 	}
@@ -31,18 +31,18 @@ class Main extends PluginBase{
 
 	public function onCommand(CommandSender $player, Command $cmd, string $label, array $args) : bool{
 		switch($cmd->getName()){
-			case "swgui":
+			case "swsolo":
 				if(!$player instanceof Player){
 					$player->sendMessage("Youve been transfered");
 					return true;
 				}
-				$this->swgui($player);
+				$this->swsolo($player);
 				break;
 		}
 		return true;
 	}
 
-	public function swgui(Player $player){
+	public function swsolo(Player $player){
 		$menu = InvMenu::create(InvMenu::TYPE_CHEST);
 		$menu->readOnly();
 		$menu->setListener(\Closure::fromCallable([$this, "GUIListener"]));
